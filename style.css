@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.sky-svg {
+  width: 100vw;
+}
+
+.axis {
+  stroke: #fff8b9;
+  stroke-width: 3px;
+}
