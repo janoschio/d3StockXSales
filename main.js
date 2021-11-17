@@ -65,7 +65,6 @@ const sneakerData = [
             ],
           },
         ],
-        
       },
     ],
   },
@@ -73,8 +72,7 @@ const sneakerData = [
 
 console.log(sneakerData);
 
-let sneakerviz = Sunburst(sneakerData,
-{
+let sneakerviz = Sunburst(sneakerData, {
   value: (d) => d.size, // size of each node (file); null for internal nodes (folders)
   label: (d) => d.name, // display name for each cell
   title: (d, n) =>
@@ -98,7 +96,6 @@ let sneakerviz = Sunburst(sneakerData,
   width: 300,
   height: 300,
 });
-
 
 document.getElementById("d3").append(sneakerviz);
 
@@ -177,6 +174,8 @@ function Sunburst(
 
   // Compute the partition layout. Note polar coordinates: x is angle and y is radius.
   d3.partition().size([2 * Math.PI, radius])(root);
+
+  console.log("rootChildren:" + root.children);
 
   /*
   // Construct a color scale.
