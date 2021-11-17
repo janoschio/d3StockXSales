@@ -2,10 +2,10 @@ console.log("... setup ...");
 
 const sneakerData = [
   {
-    name: "Zusatzlayer",
+    name: "StockX Data",
     children: [
       {
-        name: "Sneaker Sales",
+        name: "Bids",
         children: [
           {
             name: "Adidas",
@@ -35,13 +35,45 @@ const sneakerData = [
           },
         ],
       },
+      {
+        name: "Asks",
+        children: [
+          {
+            name: "Adidas",
+            children: [
+              {
+                name: "Yeezy 350 V2",
+                size: 80,
+              },
+              {
+                name: "Ultra Boost",
+                size: 10,
+              },
+            ],
+          },
+          {
+            name: "Nike",
+            children: [
+              {
+                name: "Air Max 1",
+                size: 420,
+              },
+              {
+                name: "Air Jordan 1",
+                size: 320,
+              },
+            ],
+          },
+        ],
+        
+      },
     ],
   },
 ];
 
 console.log(sneakerData);
 
-let sunviz = Sunburst(sneakerData,
+let sneakerviz = Sunburst(sneakerData,
 {
   value: (d) => d.size, // size of each node (file); null for internal nodes (folders)
   label: (d) => d.name, // display name for each cell
@@ -68,7 +100,7 @@ let sunviz = Sunburst(sneakerData,
 });
 
 
-document.getElementById("d3").append(sunviz);
+document.getElementById("d3").append(sneakerviz);
 
 // taken from observablehq as starting point
 // Copyright 2021 Observable, Inc.
