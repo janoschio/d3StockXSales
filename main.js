@@ -1,6 +1,6 @@
 console.log("... setup ...");
 
-const sneakerData = [
+const sneakerData =
   {
     name: "StockX Data",
     children: [
@@ -67,8 +67,7 @@ const sneakerData = [
         ],
       },
     ],
-  },
-];
+  };
 
 console.log(sneakerData);
 
@@ -93,8 +92,8 @@ let sneakerviz = Sunburst(sneakerData, {
           .reverse()
           .map((d) => d.data.name)
           .join("/")}.as`,
-  width: 300,
-  height: 300,
+  width: 1024,
+  height: 1024,
 });
 
 document.getElementById("d3").append(sneakerviz);
@@ -177,13 +176,13 @@ function Sunburst(
 
   console.log("rootChildren:" + root.children);
 
-  /*
+  
   // Construct a color scale.
   if (color != null) {
     color = d3.scaleSequential([0, root.children.length - 1], color).unknown(fill);
     root.children.forEach((child, i) => child.index = i);
   }
-*/
+
 
   // Construct an arc generator.
   const arc = d3
