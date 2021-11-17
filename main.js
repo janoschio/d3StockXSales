@@ -1,34 +1,34 @@
 console.log("... setup ...");
 
-const netflixdata = [
+const sneakerData = [
   {
     name: "Zusatzlayer",
     children: [
       {
-        name: "Netflix",
+        name: "Sneaker Sales",
         children: [
           {
-            name: "TV Shows",
+            name: "Adidas",
             children: [
               {
-                name: "Breaking Bad",
+                name: "Yeezy 350 V2",
                 size: 40,
               },
               {
-                name: "Silicon Valley",
+                name: "Ultra Boost",
                 size: 60,
               },
             ],
           },
           {
-            name: "Movies",
+            name: "Nike",
             children: [
               {
-                name: "Call me by your name",
+                name: "Air Max 1",
                 size: 210,
               },
               {
-                name: "Sharknado",
+                name: "Air Jordan 1",
                 size: 120,
               },
             ],
@@ -39,9 +39,9 @@ const netflixdata = [
   },
 ];
 
-console.log(netflixdata);
+console.log(sneakerData);
 
-let sunviz = Sunburst(netflixdata,
+let sunviz = Sunburst(sneakerData,
 {
   value: (d) => d.size, // size of each node (file); null for internal nodes (folders)
   label: (d) => d.name, // display name for each cell
